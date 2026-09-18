@@ -1,0 +1,72 @@
+* {
+border: none;
+border-radius: 0;
+font-family: "JetBrainsMono Nerd Font", Roboto, sans-serif;
+font-size: 13px;
+}
+
+window#waybar {
+background-color: #1e1e2e;
+border-bottom: 2px solid #cba6f7;
+color: #cdd6f4;
+}
+
+/* Loại bỏ hoàn toàn nền riêng lẻ của từng module gây lồi viền */
+#workspaces,
+#clock,
+#battery,
+#pulseaudio,
+#backlight,
+#bluetooth,
+#network,
+#idle_inhibitor,
+#power-profiles-daemon,
+#tray,
+#custom-notification,
+#custom-runcat {
+background-color: transparent;
+padding: 4px 8px;
+margin: 0;
+}
+
+#workspaces button {
+padding: 0 6px;
+background-color: transparent;
+color: #cdd6f4;
+}
+
+#workspaces button:hover {
+background: rgba(255, 255, 255, 0.1);
+}
+
+#custom-runcat {
+font-family: runcat;
+font-size: 18px;
+color: #cba6f7;
+}
+
+#custom-notification {
+font-size: 15px;
+}
+
+#bluetooth.disabled {
+color: #585b70;
+}
+
+#bluetooth.connected {
+color: #89b4fa;
+}
+
+/* Định dạng Tooltip hiển thị lịch */
+tooltip {
+background-color: #1e1e2e;
+border: 2px solid #cba6f7;
+border-radius: 10px;
+}
+
+tooltip label {
+color: #cdd6f4;
+font-family: "JetBrainsMono Nerd Font", monospace;
+font-size: 13px;
+padding: 8px;
+}

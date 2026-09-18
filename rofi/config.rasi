@@ -1,0 +1,79 @@
+configuration {
+    modi:                       "drun,run,filebrowser";
+    show-icons:                 true;
+    display-drun:               " ";
+    drun-display-format:        "{name}";
+}
+
+* {
+    font:                       "JetBrainsMono Nerd Font 10";
+    bg:                         #11111b; /* Nền đen tuyền */
+    fg:                         #cdd6f4; /* Chữ xám trắng */
+    accent:                     #cba6f7; /* Viền & điểm nhấn TÍM */
+    bg-selected:                #1e1e2e; /* Nền dòng đang chọn */
+}
+
+window {
+    width:                      450px;
+    background-color:           @bg;
+    border:                     2px;
+    border-color:               @accent; /* Viền Tím */
+    border-radius:              10px;
+    padding:                    15px;
+}
+
+mainbox {
+    background-color:           transparent;
+    children:                   [ "inputbar", "listview" ];
+    spacing:                    10px;
+}
+
+inputbar {
+    background-color:           #181825;
+    border-radius:              6px;
+    padding:                    8px 12px;
+    children:                   [ "prompt", "entry" ];
+}
+
+prompt {
+    background-color:           transparent;
+    text-color:                 @accent;
+}
+
+entry {
+    background-color:           transparent;
+    text-color:                 @fg;
+    placeholder:                "Search...";
+    placeholder-color:          #6c7086;
+}
+
+listview {
+    background-color:           transparent;
+    lines:                      7;
+    columns:                    1;
+    spacing:                    4px;
+    cycle:                      true;
+}
+
+element {
+    background-color:           transparent;
+    text-color:                 @fg;
+    border-radius:              6px;
+    padding:                    8px 10px;
+}
+
+element selected {
+    background-color:           @bg-selected;
+    text-color:                 @accent;
+}
+
+element-icon {
+    background-color:           transparent;
+    size:                       20px;
+}
+
+element-text {
+    background-color:           transparent;
+    text-color:                 inherit;
+    vertical-align:             0.5;
+}

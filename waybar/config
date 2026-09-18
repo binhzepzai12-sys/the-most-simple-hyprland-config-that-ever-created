@@ -1,0 +1,150 @@
+{
+"layer": "top",
+"position": "top",
+"spacing": 0,
+
+"modules-left": [
+"hyprland/workspaces",
+"custom/runcat"
+],
+"modules-center": [
+"clock",
+"custom/notification"
+],
+"modules-right": [
+"pulseaudio",
+"backlight",
+"bluetooth",
+"network",
+"battery",
+"idle_inhibitor",
+"power-profiles-daemon",
+"tray"
+],
+
+"hyprland/workspaces": {
+"disable-scroll": false,
+"all-outputs": true,
+"active-only": false,
+"persistent-workspaces": {
+  "*": [1, 2, 3, 4]
+},
+"format": "{name}"
+},
+
+"clock": {
+"format": " {:%H:%M   %d/%m}",
+"format-alt": " {:%A, %d %B %Y}",
+"tooltip": true,
+"tooltip-format": "{calendar}",
+"calendar": {
+  "mode": "month",
+  "weeks-pos": "right",
+  "on-scroll": 1,
+  "format": {
+    "months": "<span color='#cba6f7'><b>{}</b></span>",
+    "days": "<span color='#cdd6f4'>{}</span>",
+    "weeks": "<span color='#a6adc8'><b>W{}</b></span>",
+    "weekdays": "<span color='#f9e2af'><b>{}</b></span>",
+    "today": "<span color='#f38ba8'><b><u>{}</u></b></span>"
+  }
+},
+"actions": {
+  "on-click-right": "mode",
+  "on-scroll-up": "shift_up",
+  "on-scroll-down": "shift_down"
+}
+},
+
+"custom/notification": {
+"tooltip": false,
+"format": "{icon}",
+"format-icons": {
+  "notification": "<span foreground='red'><sup></sup></span>",
+  "none": "",
+  "dnd-notification": "<span foreground='red'><sup></sup></span>",
+  "dnd-none": ""
+},
+"return-type": "json",
+"exec-if": "which swaync-client",
+"exec": "swaync-client -swb",
+"on-click": "swaync-client -t -sw",
+"on-click-right": "swaync-client -d -sw",
+"escape": true
+},
+
+"battery": {
+"states": {
+  "warning": 30,
+  "critical": 15
+},
+"format": "{icon} {capacity}%",
+"format-charging": "󰂄 {capacity}%",
+"format-plugged": " {capacity}%",
+"format-icons": ["󰂎", "󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"]
+},
+
+"power-profiles-daemon": {
+"format": "{icon}",
+"tooltip-format": "Power profile: {profile}\nDriver: {driver}",
+"tooltip": true,
+"format-icons": {
+  "default": "",
+  "performance": "strong",
+  "balanced": "balance",
+  "power-saver": "weak"
+}
+},
+
+"idle_inhibitor": {
+"format": "{icon}",
+"format-icons": {
+  "activated": "waked up",
+  "deactivated": "go to sleep"
+},
+"tooltip": true
+},
+
+"network": {
+"format-wifi": " {essid}",
+"format-ethernet": "󰈀 Ethernet",
+"format-disconnected": "󰤮 Disconnected",
+"tooltip-format": "{ifname} via {gwaddr}",
+"on-click": "kitty -e nmtui"
+},
+
+"pulseaudio": {
+"format": "{icon} {volume}%",
+"format-muted": " Muted",
+"format-icons": {
+  "default": ["", "", ""]
+}
+},
+
+"bluetooth": {
+"format": " {status}",
+"format-disabled": "󰂲 disabled",
+"format-connected": "󰂱 {num_connections}",
+"tooltip-format": "{controller_alias}\t{controller_address}",
+"tooltip-format-connected": "{controller_alias}\t{controller_address}\n\n{device_enumerate}",
+"tooltip-format-enumerate-connected": "{device_alias}\t{device_address}",
+"on-click": "blueman-manager"
+},
+
+"backlight": {
+"format": "{icon} {percent}%",
+"format-icons": ["󰃞", "󰃟", "󰃠"]
+},
+
+"tray": {
+"icon-size": 18,
+"spacing": 10
+},
+
+"custom/runcat": {
+"exec": "/home/binhduck/.config/waybar/modules/runcat-text/.venv/bin/python /home/binhduck/.config/waybar/modules/runcat-text/main.py",
+"return-type": "json",
+"restart-interval": 1,
+"format": "{}"
+}
+}
