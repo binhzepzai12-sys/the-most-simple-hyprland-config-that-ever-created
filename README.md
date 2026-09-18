@@ -1,6 +1,6 @@
-# 🌟 My First Dotfiles & Hyprland Config
+# The Most simple dotfiles that ever created
 
-> *"Hey buddy! This is my first repo on GitHub."* 👋
+> *"Hey buddy! This is my first repo on GitHub."* 
 
 Welcome to my personal dotfiles! This repository contains my custom configurations for **Hyprland**, **Hyprlock**, **Waybar**, and **Rofi**.
 
