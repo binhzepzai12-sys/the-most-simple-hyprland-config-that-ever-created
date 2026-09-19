@@ -49,8 +49,5 @@ sudo pacman -S hyprland hyprlock waybar rofi-wayland
 
 ```
 
-## Overviews
+<img width="1024" height="556" alt="desktop" src="https://github.com/user-attachments/assets/e147d51d-0875-4624-a7b6-f29f7f42a200" />
 
-| Desktop Showcase | Workspace & Widgets |
-| :-: | :-: |
-| <img src="./assets/desktop.jpg" width="100%"> | <img src="./assets/preview.jpg" width="100%"> |
