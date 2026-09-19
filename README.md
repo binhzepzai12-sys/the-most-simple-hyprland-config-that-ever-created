@@ -56,4 +56,15 @@ sudo pacman -S hyprland hyprlock waybar rofi-wayland
 <img width="512" height="278" alt="preview" src="https://github.com/user-attachments/assets/d7db5bc1-8b11-4646-a263-0672d1c1e38b" />
 <img width="512" height="288" alt="desktop" src="https://github.com/user-attachments/assets/91f7e2d8-107f-4882-bf8f-cba7d98d6d09" />
 
+## 🎨 Live Wallpaper
 
+Live wallpaper is stored in the [`livewallpapers/`](./livewallpapers) directory.
+
+**Quick Preview / Run with mpvpaper:**
+```bash
+mpvpaper -o "no-audio loop" eDP-1 ./livewallpapers/your-video.mp4
+```
+You also need to install mpvpaper for the livewallpapers
+```bash
+sudo pacman -S mpv
+```
