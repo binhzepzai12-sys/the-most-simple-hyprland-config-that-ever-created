@@ -47,6 +47,8 @@ Install all required packages via `pacman`:
 ```bash
 sudo pacman -S hyprland hyprlock waybar rofi-wayland
 
+```
+
 ## Overviews
 
 | Desktop Showcase | Workspace & Widgets |
