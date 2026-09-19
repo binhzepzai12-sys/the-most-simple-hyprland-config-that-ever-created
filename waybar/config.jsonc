@@ -142,7 +142,7 @@
     },
 
     "custom/runcat": {
-        "exec": "/home/binhduck/.config/waybar/modules/runcat-text/.venv/bin/python /home/binhduck/.config/waybar/modules/runcat-text/main.py",
+        "exec": "~/.config/waybar/modules/runcat-text/.venv/bin/python ~/.config/waybar/modules/runcat-text/main.py",
         "return-type": "json",
         "restart-interval": 1,
         "format": "{}"
